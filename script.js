@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
           case '-':
           case '*':
           case '/':
+            case '%':
               handleOperator(value);
               break;
           case '.':
@@ -94,6 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   const performCalculation = {
+    '%': (firstOperand, secondOperand) => firstOperand % secondOperand,
       '/': (firstOperand, secondOperand) => firstOperand / secondOperand,
       '*': (firstOperand, secondOperand) => firstOperand * secondOperand,
       '+': (firstOperand, secondOperand) => firstOperand + secondOperand,
